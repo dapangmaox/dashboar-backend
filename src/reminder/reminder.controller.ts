@@ -10,8 +10,10 @@ import {
 import { ReminderService } from './reminder.service';
 import { CreateReminderDto } from './dto/create-reminder.dto';
 import { UpdateReminderDto } from './dto/update-reminder.dto';
+import { ApiTags } from '@nestjs/swagger';
 
 @Controller('reminder')
+@ApiTags('reminder')
 export class ReminderController {
   constructor(private readonly reminderService: ReminderService) {}
 

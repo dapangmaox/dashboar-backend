@@ -27,3 +27,26 @@ model Reminder {
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }
+
+model Todo {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String?
+  dueDate     DateTime
+  priority    Priority @default(medium)
+  status      Status   @default(not__started)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+enum Priority {
+  low
+  medium
+  high
+}
+
+enum Status {
+  not__started
+  in_progress
+  completed
+}
