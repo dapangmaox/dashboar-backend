@@ -79,5 +79,3 @@ docker run --name mysql-data -e MYSQL_ROOT_PASSWORD=123456 -v mysql-data:/var/li
 # 终端登录 mysql
 docker exec -it mysql-data mysql -u root -p
 ```
-
-Liang9527
